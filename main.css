@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
     text-align: center;
+    font-family: serif;
 }
 body {
     background-color: black;
@@ -20,7 +21,7 @@ header {
     width: calc((100% / 3) + 6px); 
     margin: -3px;                       /* om de randen dezelfde dikte te houden */
 }
-a {
+.nav_a {
     display: inline-block;
     text-decoration: none;
     color: black;
@@ -31,19 +32,19 @@ a {
     background-color: green;
     border: 3px solid lime;
 }
-a:hover {
+.nav_a:hover {
     font-size: x-large;
     padding-top: 4px;
     background-color: lime;
 }
 p {
-    width: fit-content;
+    width: fit-content;                 /* om de achtergrondkleur niet te laten overheersen */
     background-color: green;
     margin: auto;
     padding: 5px;
 }
 figure {
-    width: calc(60% - 10px);
+    width: calc(50% - 10px);
     margin: auto;
     padding: 5px;    
 }
@@ -84,9 +85,21 @@ fieldset {
 input, textarea{
     background-color: black;
     color: lime;
+    width: 175px;
 }
 textarea {
     height: 150px;
+}
+input[type=submit] {
+    width: initial;
+    background-color: green;
+    border-color: lime;
+    color: black;
+}
+input[type=submit]:active {
+    background-color: lime;
+    border-color: green;
+    font-weight: bold;
 }
 ::placeholder {
     color: green;
@@ -100,6 +113,9 @@ textarea {
 }
 .li {
     text-align: start;
+}
+a {
+    color: black;
 }
 footer {
     width: calc(100% - 14px);
